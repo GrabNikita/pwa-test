@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./public:/var/www/pwa-test
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/snippets:/etc/nginx/snippets/
+      - ./nginx/pwa-test.crt:/etc/ssl/certs/pwa-test.crt
+      - ./nginx/pwa-test.key:/etc/ssl/private/pwa-test.key
+      - ./nginx/pwa-test.dhparam.pem:/etc/nginx/pwa-test.dhparam.pem

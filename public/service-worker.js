@@ -2,22 +2,32 @@ const cacheName = 'pwa-test';
 const filesToCache = [
     '/',
     '/index.html',
+    '/main.css',
+    '/main.js',
 ];
 
-/* Start the service worker and cache all of the app's content */
-self.addEventListener('install', function(e) {
-    e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            return cache.addAll(filesToCache);
-        })
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open(cacheName).then(
+            cache => {
+                return cache.addAll(filesToCache);
+            },
+            error => {
+                console.error('error on open cache');
+            }
+        )
     );
 });
 
-/* Serve cached content when offline */
-self.addEventListener('fetch', function(e) {
-    e.respondWith(
-        caches.match(e.request).then(function(response) {
-            return response || fetch(e.request);
-        })
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request).then(
+            response => {
+                return response || fetch(event.request);
+            },
+            error => {
+                console.error('error on match request to cache');
+            }
+        )
     );
 });

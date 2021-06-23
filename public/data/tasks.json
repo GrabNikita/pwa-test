@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Task 1",
+      "deadline": "14:04 18.06.2021",
+      "status": "done",
+      "viewed": true
+    },
+    {
+      "id": 2,
+      "name": "Task 2",
+      "deadline": "12:45 01.07.2021",
+      "status": "new",
+      "viewed": true
+    }
+  ]
+}

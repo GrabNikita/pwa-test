@@ -12,7 +12,7 @@
       "name": "Task 2",
       "deadline": "12:45 01.07.2021",
       "status": "new",
-      "viewed": true
+      "viewed": false
     }
   ]
 }

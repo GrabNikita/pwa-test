@@ -1,0 +1,22 @@
+{
+  "name": "demo.red-carpet.ru",
+  "version": "0.1.0",
+  "description": "test demo project",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrabNikita/pwa-test.git"
+  },
+  "keywords": [
+    "pwa",
+    "react",
+    "redux"
+  ],
+  "author": "Grab Nikita",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GrabNikita/pwa-test/issues"
+  },
+  "homepage": "https://github.com/GrabNikita/pwa-test#readme"
+}

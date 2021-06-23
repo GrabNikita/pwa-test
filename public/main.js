@@ -32,7 +32,6 @@ function showNotification(notificationText, options = {}) {
 }
 
 function loadTasks() {
-    console.log('loadTasks call');
     fetch('/data/tasks.json').then(
         response => {
             return response.json().then(

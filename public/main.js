@@ -1,3 +1,7 @@
+window.addEventListener('load', function () {
+    initApp();
+});
+
 function initApp() {
     checkNotificationPermissions();
     loadTasks();

@@ -1,12 +1,7 @@
-window.onload = () => {
+window.addEventListener('load', function () {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./service-worker.js').then(
-            response => {
-                console.log('success sw register', response);
-            },
-            error => {
-                console.error('error', error);
-            }
-        );
+        navigator.serviceWorker.register('./service-worker.js').catch(error => {
+            console.error('register service worker error', error);
+        });
     }
-}
+});

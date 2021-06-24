@@ -2,16 +2,23 @@
   "tasks": [
     {
       "id": 1,
-      "name": "Task 1",
+      "name": "Active task",
       "deadline": "14:04 18.06.2021",
-      "status": "done",
+      "status": "active",
       "viewed": true
     },
     {
       "id": 2,
-      "name": "Task 2",
+      "name": "New task",
       "deadline": "12:45 01.07.2021",
       "status": "new",
+      "viewed": false
+    },
+    {
+      "id": 3,
+      "name": "done task",
+      "deadline": "12:45 01.07.2021",
+      "status": "done",
       "viewed": false
     }
   ]

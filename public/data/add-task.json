@@ -1,0 +1,9 @@
+{
+  "task": {
+    "id": 10,
+    "name": "Added task",
+    "deadline": "14:04 18.06.2021",
+    "status": "active",
+    "viewed": false
+  }
+}

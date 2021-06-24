@@ -1,10 +1,15 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import {NOTIFICATION_STATUS, NOTIFICATION_TYPE} from '../../../constants';
-import {setViewed} from '../../../redux/reducers/notificationsSlice';
+import {setViewed} from '../../../redux/actions/notificationsActions';
 
-export default function Notification({notification}) {
+export default function Notification({notificationId}) {
+    const notification = useSelector(state => {
+        return state.notifications.notifications.find(notification => {
+            return notification.id === notificationId;
+        });
+    });
     if (notification.status === NOTIFICATION_STATUS.VIEWED) return null;
 
     const dispatch = useDispatch();

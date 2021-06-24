@@ -25,13 +25,13 @@ export default class App extends React.Component {
         return <React.Fragment>
             <h1>PWA test</h1>
             <div id="message-wrapper">
-                {notifications.map(message => {
-                    return <div className={'message'} key={message}>{message}</div>;
+                {notifications.map((message, index) => {
+                    return <div className={'message'} key={index}>{message}</div>;
                 })}
             </div>
             <div id="error-wrapper">
-                {errors.map(error => {
-                    return <div className={'error'} key={error}>{error}</div>;
+                {errors.map((error, index) => {
+                    return <div className={'error'} key={index}>{error}</div>;
                 })}
             </div>
             <div id="tasks-wrapper">

@@ -1,0 +1,16 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "text": "Hi, Dima!",
+      "status": "new",
+      "type": "message"
+    },
+    {
+      "id": 2,
+      "text": "No hi",
+      "status": "viewed",
+      "type": "error"
+    }
+  ]
+}

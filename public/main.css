@@ -2,19 +2,26 @@ html {
     font-size: 16px;
 }
 
-#error-wrapper .error {
-    margin: 15px 0;
-    color: red;
-    text-align: center;
-}
-
-#message-wrapper .message {
+#notifications .notification {
     margin: 15px 0;
     text-align: center;
     font-weight: bold;
 }
 
+#notifications .notification.error {
+    color: red;
+}
+
 #tasks-wrapper table {
     margin: 15px auto;
     border: 1px solid #000;
+}
+
+#buttons-wrapper {
+    margin: 15px 0;
+    text-align: center;
+}
+
+#buttons-wrapper button:not(:last-child) {
+    margin-right: 15px;
 }

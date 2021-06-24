@@ -20,6 +20,7 @@ const staticCacheKeys = [
 const fetchCacheName = 'pwa-test-fetch';
 const fetchCacheKeys = [
     '/data/tasks.json',
+    '/data/notifications.json',
 ];
 
 self.addEventListener('install', function (event) {

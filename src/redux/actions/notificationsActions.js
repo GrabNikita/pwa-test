@@ -27,26 +27,3 @@ export function setViewed() {
         });
     }
 }
-
-export function requestPermissions() {
-    return dispatch => {
-        console.log('requestPermissions call');
-        if (!('Notification' in window)) {
-            console.error('This browser does not support desktop notification');
-            return;
-        }
-        if (Notification.permission === 'granted') {
-            return;
-        }
-        if (Notification.permission === 'denied') {
-            return;
-        }
-
-        Notification.requestPermission().catch(
-            error => {
-                console.error('request notification permission error', error);
-            }
-        );
-    }
-}
-

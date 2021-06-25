@@ -1,20 +1,21 @@
 import React, {useEffect} from 'react';
-import {connect, useDispatch, useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import Tasks from '../Tasks';
 import Notifications from '../Notifications';
-import {requestPermissions} from '../../redux/actions/notificationsActions';
+import {requestNotificationsPermissions} from '../../redux/actions/appActions';
 
 export default function App() {
     const {loading, error} = useSelector(state => {
         return {
             loading: state.app.loading,
             error: state.app.error,
+            notificationsPermission: state.app.notificationsPermission,
         }
     });
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(requestPermissions());
+        dispatch(requestNotificationsPermissions());
     }, []);
 
     return <React.Fragment>

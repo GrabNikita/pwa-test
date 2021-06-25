@@ -1,6 +1,11 @@
 const initialState = {
     loading: false,
     error: '',
+    notificationsPermission:{
+        permission: 'default',
+        requested: false,
+        supported: false,
+    },
 };
 export default function (state = initialState, action) {
     switch (action.type) {
@@ -18,6 +23,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 error: action.payload,
+            };
+        case 'app/requestNotificationsPermissions':
+            return {
+                ...state,
+                notificationsPermission: action.payload,
             };
         default:
             return state;

@@ -1,5 +1,3 @@
-import {NOTIFICATION_STATUS} from '../../constants';
-
 const initialState = {
     notifications: [],
 }
@@ -24,8 +22,6 @@ export default function (state = initialState, action) {
                 ...state,
                 notifications: notifications,
             };
-        case 'notifications/requestPermissions':
-            return state;
         default:
             return state;
     }
